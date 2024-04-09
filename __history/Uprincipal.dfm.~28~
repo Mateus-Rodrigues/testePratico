@@ -1,0 +1,99 @@
+object frm_principal: Tfrm_principal
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Principal'
+  ClientHeight = 481
+  ClientWidth = 624
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Menu = MainMenu1
+  Position = poDesigned
+  OnClose = FormClose
+  TextHeight = 15
+  object atlAbreForm: TActionList
+    Left = 32
+    Top = 8
+    object actCadClientes: TAction
+      Caption = '&Clientes'
+      Hint = 'Cadastro de Clientes'
+      ShortCut = 113
+      OnExecute = actCadClientesExecute
+    end
+    object actCadCidades: TAction
+      Caption = '&Cidades'
+      Hint = 'Cadastro de Cidades'
+      ShortCut = 114
+      OnExecute = actConsultaCidadesExecute
+    end
+    object actConsultaClientes: TAction
+      Caption = '&Clientes'
+      Hint = 'Consulta De Clientes'
+      ShortCut = 115
+      OnExecute = actConsultaClientesExecute
+    end
+    object actConsultacidades: TAction
+      Caption = '&Cidades'
+      Hint = 'Consulta de Cidades'
+      ShortCut = 116
+      OnExecute = actConsultacidadesExecute
+    end
+    object actRelClientes: TAction
+      Caption = '&Clientes'
+      Hint = 'Relat'#243'rios De Clientes'
+      ShortCut = 117
+    end
+    object actRelCidades: TAction
+      Caption = '&Cidades'
+      Hint = 'Relat'#243'rios de Cidades'
+      ShortCut = 118
+    end
+    object actSair: TAction
+      Caption = '&Sair'
+      Hint = 'Sair'
+      OnExecute = actSairExecute
+    end
+  end
+  object MainMenu1: TMainMenu
+    Left = 128
+    Top = 8
+    object Cadastro1: TMenuItem
+      Caption = 'Cad&astro'
+      object Clientes1: TMenuItem
+        Action = actCadClientes
+      end
+      object Clientes2: TMenuItem
+        Action = actCadCidades
+      end
+    end
+    object Clientes3: TMenuItem
+      Caption = '&Consulta'
+      Hint = 'Consulta De Clientes'
+      ShortCut = 115
+      object Clientes4: TMenuItem
+        Action = actConsultaClientes
+        OnClick = actConsultaClientesExecute
+      end
+      object Cidades1: TMenuItem
+        Action = actConsultacidades
+        OnClick = actConsultaCidadesExecute
+      end
+    end
+    object Relatrios1: TMenuItem
+      Caption = 'Rel&at'#243'rios'
+      object Clientes5: TMenuItem
+        Action = actRelClientes
+      end
+      object Cidades2: TMenuItem
+        Action = actRelCidades
+      end
+    end
+    object Sair1: TMenuItem
+      Action = actSair
+    end
+  end
+end

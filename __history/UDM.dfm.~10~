@@ -1,0 +1,106 @@
+object dm_teste_sinqia: Tdm_teste_sinqia
+  Height = 480
+  Width = 640
+  object conexao: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
+      'fo=False;User ID=mateusrodrigues;Initial Catalog=appDelphi;Data ' +
+      'Source=DESKTOP-UEHKIA8'
+    LoginPrompt = False
+    Provider = 'SQLOLEDB.1'
+    Left = 24
+    Top = 16
+  end
+  object qry_cad_clientes: TADOQuery
+    Connection = conexao
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      
+        'Select cod_cliente, cgc_cpf_cliente, cli_nome, cli_telefone, cli' +
+        '_endereco, cli_bairro, cli_complemento, cli_e_mail, cli_DDD from' +
+        ' clientes')
+    Left = 120
+    Top = 16
+    object qry_cad_clientescod_cliente: TAutoIncField
+      DisplayLabel = 'C'#243'digo'
+      FieldName = 'cod_cliente'
+      ReadOnly = True
+    end
+    object qry_cad_clientescgc_cpf_cliente: TWideStringField
+      DisplayLabel = 'Cpf'
+      FieldName = 'cgc_cpf_cliente'
+      Size = 15
+    end
+    object qry_cad_clientescli_nome: TWideStringField
+      DisplayLabel = 'Nome'
+      FieldName = 'cli_nome'
+      Size = 50
+    end
+    object qry_cad_clientescli_telefone: TIntegerField
+      DisplayLabel = 'Telefone'
+      FieldName = 'cli_telefone'
+    end
+    object qry_cad_clientescli_endereco: TWideStringField
+      DisplayLabel = 'Endereco'
+      FieldName = 'cli_endereco'
+      Size = 50
+    end
+    object qry_cad_clientescli_bairro: TWideStringField
+      DisplayLabel = 'Bairro'
+      FieldName = 'cli_bairro'
+      Size = 50
+    end
+    object qry_cad_clientescli_complemento: TWideStringField
+      DisplayLabel = 'Complemento'
+      FieldName = 'cli_complemento'
+      Size = 10
+    end
+    object qry_cad_clientescli_e_mail: TWideStringField
+      DisplayLabel = 'E-mail'
+      FieldName = 'cli_e_mail'
+      Size = 60
+    end
+    object qry_cad_clientescli_DDD: TIntegerField
+      DisplayLabel = 'DDD'
+      FieldName = 'cli_DDD'
+    end
+  end
+  object qry_Cad_Cidades: TADOQuery
+    Connection = conexao
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      
+        'select cod_cidade, cid_nome, cid_estado, cid_cep_inicial, cid_ce' +
+        'p_final from cidades')
+    Left = 264
+    Top = 16
+    object qry_Cad_Cidadescod_cidade: TAutoIncField
+      DisplayLabel = 'C'#243'digo'
+      FieldName = 'cod_cidade'
+      ReadOnly = True
+    end
+    object qry_Cad_Cidadescid_nome: TWideStringField
+      DisplayLabel = 'Nome'
+      FieldName = 'cid_nome'
+      Size = 50
+    end
+    object qry_Cad_Cidadescid_estado: TWideStringField
+      DisplayLabel = 'Estado'
+      FieldName = 'cid_estado'
+      Size = 50
+    end
+    object qry_Cad_Cidadescid_cep_inicial: TWideStringField
+      DisplayLabel = 'Cep inicial'
+      FieldName = 'cid_cep_inicial'
+      Size = 10
+    end
+    object qry_Cad_Cidadescid_cep_final: TWideStringField
+      DisplayLabel = 'Cep final'
+      FieldName = 'cid_cep_final'
+      Size = 10
+    end
+  end
+end

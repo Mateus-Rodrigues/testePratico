@@ -1,0 +1,77 @@
+unit Ucad_cidades;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
+  Vcl.StdCtrls, Vcl.Mask, Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.Buttons,
+  System.ImageList, Vcl.ImgList;
+
+type
+  Tfrm_cad_cidades = class(TForm)
+    Label1: TLabel;
+    ds_cad_cidades: TDataSource;
+    Label2: TLabel;
+    db_nome: TDBEdit;
+    Label3: TLabel;
+    db_estado: TDBEdit;
+    Label4: TLabel;
+    db_cep_inicial: TDBEdit;
+    Label5: TLabel;
+    db_cep_final: TDBEdit;
+    db_codigo: TDBText;
+    btn_Cadastrar: TButton;
+    btn_Editar: TButton;
+    btn_Salvar: TButton;
+    btn_Cancelar: TButton;
+    btn_Excluir: TButton;
+    ImageList1: TImageList;
+    procedure FormShow(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure btn_CadastrarClick(Sender: TObject);
+    procedure btn_EditarClick(Sender: TObject);
+    procedure btn_SalvarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frm_cad_cidades: Tfrm_cad_cidades;
+
+implementation
+
+uses
+  UDM;
+
+{$R *.dfm}
+
+procedure Tfrm_cad_cidades.btn_CadastrarClick(Sender: TObject);
+begin
+ ds_cad_cidades.DataSet.Append;
+end;
+
+procedure Tfrm_cad_cidades.btn_EditarClick(Sender: TObject);
+begin
+   ds_cad_cidades.DataSet.edit;
+end;
+
+procedure Tfrm_cad_cidades.btn_SalvarClick(Sender: TObject);
+begin
+   ds_cad_cidades.DataSet.post;
+end;
+
+procedure Tfrm_cad_cidades.FormClose(Sender: TObject;
+    var Action: TCloseAction);
+begin
+    dm_teste_sinqia.qry_cad_cidades.Close;
+end;
+
+procedure Tfrm_cad_cidades.FormShow(Sender: TObject);
+begin
+  dm_teste_sinqia.qry_cad_cidades.open;
+end;
+
+end.

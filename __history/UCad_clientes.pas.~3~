@@ -1,0 +1,62 @@
+unit UCad_clientes;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.StdCtrls, Vcl.Mask,
+  Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.Buttons;
+
+type
+  Tfrm_cad_clientes = class(TForm)
+    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    ds_cad_for: TDataSource;
+    Label2: TLabel;
+    DBEdit2: TDBEdit;
+    Label3: TLabel;
+    DBEdit3: TDBEdit;
+    Label4: TLabel;
+    DBEdit4: TDBEdit;
+    Label5: TLabel;
+    DBEdit5: TDBEdit;
+    Label6: TLabel;
+    DBEdit6: TDBEdit;
+    Label7: TLabel;
+    DBEdit7: TDBEdit;
+    Label8: TLabel;
+    DBEdit8: TDBEdit;
+    Label9: TLabel;
+    DBEdit9: TDBEdit;
+    Label10: TLabel;
+    DBEdit10: TDBEdit;
+    dbnClientes: TDBNavigator;
+    procedure FormShow(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frm_cad_clientes: Tfrm_cad_clientes;
+
+implementation
+
+{$R *.dfm}
+
+uses UDM;
+
+procedure Tfrm_cad_clientes.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+  dm_teste_sinqia.qry_cad_clientes.Close;
+end;
+
+procedure Tfrm_cad_clientes.FormShow(Sender: TObject);
+begin
+   dm_teste_sinqia.qry_cad_clientes.open;
+end;
+
+end.

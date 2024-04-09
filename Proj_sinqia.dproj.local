@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/04/07 17:45:09.000.812,=C:\Users\MateusRodrigues\Documents\Embarcadero\Studio\Projects\testePratico\Unit3.pas</Transaction>
+    <Transaction>2024/04/07 17:45:16.000.000,=C:\Users\MateusRodrigues\Documents\Embarcadero\Studio\Projects\testePratico\Unit4.pas</Transaction>
+    <Transaction>2024/04/07 17:45:19.000.927,=C:\Users\MateusRodrigues\Documents\Embarcadero\Studio\Projects\testePratico\Unit5.pas</Transaction>
+    <Transaction>2024/04/07 17:45:22.000.904,=C:\Users\MateusRodrigues\Documents\Embarcadero\Studio\Projects\testePratico\Unit6.pas</Transaction>
+    <Transaction>2024/04/07 17:45:27.000.240,=C:\Users\MateusRodrigues\Documents\Embarcadero\Studio\Projects\testePratico\Unit7.pas</Transaction>
+    <Transaction>2024/04/07 17:46:34.000.571,C:\Users\MateusRodrigues\Documents\Embarcadero\Studio\Projects\testePratico\Unit3.pas=C:\Users\MateusRodrigues\Documents\Embarcadero\Studio\Projects\testePratico\UCad_clientes.pas</Transaction>
+    <Transaction>2024/04/07 17:46:34.000.571,C:\Users\MateusRodrigues\Documents\Embarcadero\Studio\Projects\testePratico\Unit3.dfm=C:\Users\MateusRodrigues\Documents\Embarcadero\Studio\Projects\testePratico\UCad_clientes.dfm</Transaction>
+    <Transaction>2024/04/07 17:56:55.000.249,C:\Users\MateusRodrigues\Documents\Embarcadero\Studio\Projects\testePratico\Unit5.pas=C:\Users\MateusRodrigues\Documents\Embarcadero\Studio\Projects\testePratico\UCon_cliente.pas</Transaction>
+    <Transaction>2024/04/07 17:56:55.000.249,C:\Users\MateusRodrigues\Documents\Embarcadero\Studio\Projects\testePratico\Unit5.dfm=C:\Users\MateusRodrigues\Documents\Embarcadero\Studio\Projects\testePratico\UCon_cliente.dfm</Transaction>
+    <Transaction>2024/04/07 17:57:24.000.026,C:\Users\MateusRodrigues\Documents\Embarcadero\Studio\Projects\testePratico\Unit4.pas=C:\Users\MateusRodrigues\Documents\Embarcadero\Studio\Projects\testePratico\UCon_cidade.pas</Transaction>
+    <Transaction>2024/04/07 17:57:24.000.026,C:\Users\MateusRodrigues\Documents\Embarcadero\Studio\Projects\testePratico\Unit4.dfm=C:\Users\MateusRodrigues\Documents\Embarcadero\Studio\Projects\testePratico\UCon_cidade.dfm</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Ucad_cidades.pas"/>
+    <File Path="Ucad_cidades.dfm"/>
+    <File Path="UCad_clientes.pas"/>
+    <File Path="UCad_clientes.dfm"/>
+    <File Path="UCon_cidade.pas"/>
+    <File Path="UCon_cidade.dfm"/>
+    <File Path="UCon_cliente.pas"/>
+    <File Path="UCon_cliente.dfm"/>
+    <File Path="UDM.pas"/>
+    <File Path="UDM.dfm"/>
+    <File Path="Uprincipal.pas"/>
+    <File Path="Uprincipal.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>

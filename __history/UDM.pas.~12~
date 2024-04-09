@@ -1,0 +1,41 @@
+unit UDM;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Data.DB, Data.Win.ADODB;
+
+type
+  Tdm_teste_sinqia = class(TDataModule)
+    conexao: TADOConnection;
+    qry_cad_clientes: TADOQuery;
+    qry_cad_clientescod_cliente: TAutoIncField;
+    qry_cad_clientescgc_cpf_cliente: TStringField;
+    qry_cad_clientescli_nome: TWideStringField;
+    qry_cad_clientescli_telefone: TIntegerField;
+    qry_cad_clientescli_endereco: TWideStringField;
+    qry_cad_clientescli_bairro: TWideStringField;
+    qry_cad_clientescli_complemento: TWideStringField;
+    qry_cad_clientescli_e_mail: TWideStringField;
+    qry_Cad_Cidades: TADOQuery;
+    qry_Cad_Cidadescod_cidade: TAutoIncField;
+    qry_Cad_Cidadescid_nome: TWideStringField;
+    qry_Cad_Cidadescid_estado: TWideStringField;
+    qry_Cad_Cidadescid_cep_inicial: TWideStringField;
+    qry_Cad_Cidadescid_cep_final: TWideStringField;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  dm_teste_sinqia: Tdm_teste_sinqia;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

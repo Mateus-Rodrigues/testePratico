@@ -1,0 +1,16 @@
+object frm_con_clientes: Tfrm_con_clientes
+  Left = 0
+  Top = 0
+  Caption = 'Consulta Cliente'
+  ClientHeight = 324
+  ClientWidth = 529
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  OnClose = FormClose
+  OnShow = FormShow
+  TextHeight = 15
+end

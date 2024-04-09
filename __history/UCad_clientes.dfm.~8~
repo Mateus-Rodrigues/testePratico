@@ -1,0 +1,185 @@
+object frm_cad_clientes: Tfrm_cad_clientes
+  Left = 0
+  Top = 0
+  Caption = 'Cadastro de Clientes'
+  ClientHeight = 347
+  ClientWidth = 594
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  OnClose = FormClose
+  OnCreate = FormShow
+  OnShow = FormShow
+  TextHeight = 15
+  object Label1: TLabel
+    Left = 8
+    Top = 16
+    Width = 39
+    Height = 15
+    Caption = 'C'#243'digo'
+    FocusControl = db_codigo
+  end
+  object Label2: TLabel
+    Left = 8
+    Top = 64
+    Width = 19
+    Height = 15
+    Caption = 'Cpf'
+    FocusControl = db_cpf
+  end
+  object Label3: TLabel
+    Left = 112
+    Top = 16
+    Width = 33
+    Height = 15
+    Caption = 'Nome'
+    FocusControl = db_nome
+  end
+  object Label4: TLabel
+    Left = 242
+    Top = 66
+    Width = 44
+    Height = 15
+    Caption = 'Telefone'
+    FocusControl = db_telefone
+  end
+  object Label5: TLabel
+    Left = 8
+    Top = 127
+    Width = 49
+    Height = 15
+    Caption = 'Endereco'
+    FocusControl = db_endereco
+  end
+  object Label6: TLabel
+    Left = 272
+    Top = 129
+    Width = 31
+    Height = 15
+    Caption = 'Bairro'
+    FocusControl = db_bairro
+  end
+  object Label7: TLabel
+    Left = 437
+    Top = 132
+    Width = 77
+    Height = 15
+    Caption = 'Complemento'
+    FocusControl = de_complemento
+  end
+  object Label8: TLabel
+    Left = 376
+    Top = 66
+    Width = 34
+    Height = 15
+    Caption = 'E-mail'
+    FocusControl = db_email
+  end
+  object Label9: TLabel
+    Left = 184
+    Top = 71
+    Width = 24
+    Height = 15
+    Caption = 'DDD'
+    FocusControl = db_ddd
+  end
+  object db_codigo: TDBEdit
+    Left = 8
+    Top = 37
+    Width = 77
+    Height = 23
+    DataField = 'cod_cliente'
+    DataSource = ds_cad_for
+    TabOrder = 0
+  end
+  object db_cpf: TDBEdit
+    Left = 8
+    Top = 87
+    Width = 154
+    Height = 23
+    DataField = 'cgc_cpf_cliente'
+    DataSource = ds_cad_for
+    TabOrder = 1
+  end
+  object db_nome: TDBEdit
+    Left = 112
+    Top = 37
+    Width = 449
+    Height = 23
+    DataField = 'cli_nome'
+    DataSource = ds_cad_for
+    TabOrder = 2
+  end
+  object db_telefone: TDBEdit
+    Left = 242
+    Top = 87
+    Width = 104
+    Height = 23
+    DataField = 'cli_telefone'
+    DataSource = ds_cad_for
+    TabOrder = 3
+  end
+  object db_endereco: TDBEdit
+    Left = 8
+    Top = 148
+    Width = 241
+    Height = 23
+    DataField = 'cli_endereco'
+    DataSource = ds_cad_for
+    TabOrder = 4
+  end
+  object db_bairro: TDBEdit
+    Left = 272
+    Top = 148
+    Width = 145
+    Height = 23
+    DataField = 'cli_bairro'
+    DataSource = ds_cad_for
+    TabOrder = 5
+  end
+  object de_complemento: TDBEdit
+    Left = 437
+    Top = 148
+    Width = 124
+    Height = 23
+    DataField = 'cli_complemento'
+    DataSource = ds_cad_for
+    TabOrder = 6
+  end
+  object db_email: TDBEdit
+    Left = 376
+    Top = 87
+    Width = 185
+    Height = 23
+    DataField = 'cli_e_mail'
+    DataSource = ds_cad_for
+    TabOrder = 7
+  end
+  object dbnClientes: TDBNavigator
+    Left = -4
+    Top = 304
+    Width = 600
+    Height = 33
+    DataSource = ds_cad_for
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 8
+  end
+  object db_ddd: TDBEdit
+    Left = 184
+    Top = 87
+    Width = 41
+    Height = 23
+    DataField = 'cli_DDD'
+    DataSource = ds_cad_for
+    TabOrder = 9
+  end
+  object ds_cad_for: TDataSource
+    DataSet = dm_teste_sinqia.qry_cad_clientes
+    Left = 552
+    Top = 8
+  end
+end
