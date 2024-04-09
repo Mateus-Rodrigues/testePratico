@@ -36,6 +36,12 @@ type
     procedure Cidades1Click(Sender: TObject);
   private
     { Private declarations }
+    pesquisa : String;
+    const sql = 'SELECT cod_cliente, cgc_cpf_cliente, ' +
+                 'cli_nome, cli_telefone, cli_endereco,' +
+                 'cli_bairro, cli_complemento, cli_e_mail,' +
+                 'cod_cidade, cli_DDD ' +
+                 'FROM clientes';
   public
     { Public declarations }
   end;
